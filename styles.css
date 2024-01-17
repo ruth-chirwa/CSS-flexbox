@@ -1,29 +1,51 @@
 *{
     box-sizing: border-box;
   }
+
 .gallery img{
     width: 100%;
     max-width: 350px;
     height: 300px;
+    object-fit: cover; /*images have different ratios, so use object-fit property for maintaining aspect ratio, resulting in cropping to fit.*/
+    border-radius: 10px;
+    
+}
+
+.gallery::after{ /*The ::after pseudo-element creates an element that is the last child of the selected element. */
+    content: "";
+    width: 350px;
   }
   .gallery{
     display: flex; /* this is like a parent class; all its children become part of a container whereby they become flex items*/
     flex-direction: row; /*This is the main axis*/
     flex-wrap: wrap; /* this wraps the content within the container */
     justify-content: center;
+    align-items: center; /* this  positions the flex content along the cross axis.*/
+    padding: 20px 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 20px; /*The gap CSS shorthand property sets the gaps, also known as gutters, between rows and columns.*/
   }
+img{
+    transition: transform 0.5s;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
   body{
     margin: 0;
     font-family: sans-serif;
     background-color: #f5f6f7;
   }
+
   .head{
     text-transform: uppercase;
     padding: 32px;
-    background-color: #0a0a23;
+    background-color: #0a0b4e;
     color: #fff;
     border-bottom: 4px solid #fdb347;
-    margin-bottom: 20px;
     text-align: center;
   }
 /*.gallery{
