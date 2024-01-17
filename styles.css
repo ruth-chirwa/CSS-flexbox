@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+  }
+.gallery img{
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+  }
+  .gallery{
+    display: flex; /* this is like a parent class; all its children become part of a container whereby they become flex items*/
+    flex-direction: row; /*This is the main axis*/
+    flex-wrap: wrap; /* this wraps the content within the container */
+    justify-content: center;
+  }
+  body{
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+  }
+  .head{
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+/*.gallery{
+    width: 50%;
+    border: 5px solid red;
+}
+
+img{
+    width: 100%;
+    border: 5px solid blue;
+    padding: 5px;
+}*/
